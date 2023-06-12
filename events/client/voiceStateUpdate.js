@@ -37,7 +37,7 @@ module.exports = {
 			const insertQuery = 'INSERT INTO vcOwnerList (id) VALUES (?)';
 			db.prepare(insertQuery).run(memberId);
 
-			const channelId = '1116825333757399080';
+			const channelId = '1117695511147851776';
 			const channel = guild.channels.cache.get(channelId);
 			channel.send(`<@${member.user.id}> joined an empty voice channel <#${voiceChannel.id}> and is the owner.`);
 		}
@@ -57,7 +57,7 @@ module.exports = {
 				const deleteQuery = 'DELETE FROM vcOwnerList WHERE id = ?';
 				db.prepare(deleteQuery).run(memberId);
 
-				const channelId = '1116825333757399080';
+				const channelId = '1117695511147851776';
 				const channel = guild.channels.cache.get(channelId);
 				channel.send(`<@${member.user.id}> was removed as owner of <#${previousChannel.id}> as they left the channel.`);
 			}
